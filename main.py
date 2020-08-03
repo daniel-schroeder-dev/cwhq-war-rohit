@@ -1,3 +1,4 @@
+from pprint import pprint
 card = {}
 
 ranks = "2", "3", "4", "5", "6", "7", "8", "9", "10", "J", "Q", "K", "A"
@@ -10,4 +11,4 @@ for rank in ranks:
         cards.append({ "suit": suit, "rank": rank })
 
 
-print(cards)
+pprint(cards)
