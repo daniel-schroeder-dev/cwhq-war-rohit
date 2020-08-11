@@ -59,4 +59,5 @@ while True:
     
 # bug empty played cards after each round
     # when someone wins accumlate cards
-    
+    # card counter for each player
+
