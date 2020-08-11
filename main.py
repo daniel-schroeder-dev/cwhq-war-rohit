@@ -33,16 +33,19 @@ In a game loop:
   - Draw and compare the cards for each turn. 
 """
 played_cards=[]
+random.shuffle(cards)
+player1 = cards[26:]
+player2 = cards[:26]
 while True:
-    random.shuffle(cards)
-    player1 = cards[26:]
-    player2 = cards[:26]
+
     input("This loops till you press CTRL-C ")
     current_card = player1.pop()
     current_card2 = player2.pop()
     played_cards.append(current_card)
     played_cards.append(current_card2)
-    print(played_cards)
+    print("Cards drawn this round:")
+    for card in played_cards:
+        print(card)
 
     if current_card["value"] == current_card2["value"]:
         print("war")
@@ -54,9 +57,6 @@ while True:
 
 
     
-
+# bug empty played cards after each round
+    # when someone wins accumlate cards
     
-    # not for me:
-        # for card1, card2 in zip(played_cards, played_cards2):        
-        #     high_card = max(card1, card2, key=lambda x: x["value"])
-        #     print(f"High card is {high_card}")
